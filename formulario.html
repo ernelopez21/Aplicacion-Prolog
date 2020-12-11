@@ -35,16 +35,16 @@
                             <div class="d-flex justify-content-around">
                                 
                                 <div class="form-check form-check-inline">
-                                    <input class="" type="radio" name="preferencia" value="laptop"><label class="pl-2"> Laptop</label>
+                                    <input class="" id="preferencia1" type="radio" name="preferencia" value="laptop"><label class="pl-2"> Laptop</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="" type="radio" name="preferencia" value="Escritorio"><label class="pl-2"> Escritorio</label>
+                                    <input class="" id="preferencia2" type="radio" name="preferencia" value="Escritorio"><label class="pl-2"> Escritorio</label>
                                 </div>
                             </div>
                             
                             <div class="form-group d-flex flex-column pt-2 font-weight-bolder">    
                                 <label class="pt-2">¿Cual es tu area de trabajo?</label>
-                                <select id="inputState" class="form-control container">
+                                <select id="area" class="form-control container" required>
                                     <option selected>Choose...</option>
                                     <option value="escuela">Escuela</option>
                                     <option value="oficina">Oficina</option>
@@ -53,14 +53,13 @@
                                 </select>                              
                                 
                                 <label class="pt-2">¿Cual es tu presupuesto estimado?</label>
-                                <input type="range" min="100" max="50000" class="form-control-range" id="formControlRange">
+                                <input type="range" min="5000" max="50000" class="form-control-range" id="presupuesto">
 
                                 <label class="pt-4">¿Que Procesador Prefieres?</label>
-                                <select id="inputState" class="form-control container">
+                                <select id="procesador" class="form-control container">
                                     <option selected>Choose...</option>
-                                    <option value="escuela">Intel</option>
-                                    <option value="oficina">AMD</option>
-                                    <option value="diseño">Cualquiera</option>
+                                    <option value="intel">Intel</option>
+                                    <option value="amd">AMD</option>
                                 </select>  
 
                             </div>
@@ -69,7 +68,7 @@
 
 
                             <div class="d-flex justify-content-center">
-                                <button type="submit" class="col-3 btn btn-primary rounded-pill">Calcular</button>
+                                <button type="submit" id="submit" class="col-3 btn btn-primary rounded-pill">Calcular</button>
                             </div>
                                 
                             
@@ -103,6 +102,9 @@
         </div>
         
     </div>
+    
+    <script type="text/javascript" src="frameworks/tau-prolog.js"></script>
+    <script type="text/javascript" src="prolog.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
