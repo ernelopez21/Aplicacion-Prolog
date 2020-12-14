@@ -26,7 +26,15 @@
     <main>    
         <div class="container">
             <div class="row">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center" id="formulario">
+                    <textarea name="program" id="program" cols="30" rows="10" hidden="true">
+                        compu('Asus',caracteristicas(15.6,'500 GB'),buscar('Laptop','Diseño',15000,'Intel')).
+                        compu('Dell',caracteristicas(14,'1000 GB'),buscar('Escritorio','Gaming',25000,'AMD')).
+                        compu('Hp',caracteristicas(20,'1500 GB'),buscar('Escritorio','Oficina',20000,'Intel')).
+                        compu('Acer',caracteristicas(13,'250 GB'),buscar('Laptop','Escuela',10000,'AMD')).
+                        compu('Vaio',caracteristicas(17,'2000 GB'),buscar('Escritorio','Escuela',17000,'Intel')).
+                        recomendacion(buscar(Tipo,Area,Precio,Procesador)):-compu(X,caracteristicas(P,G),buscar(Tipo,Area,Precio,Procesador)).
+                    </textarea>
                     <form class="border border-secondary rounded-lg">
                         <fieldset class="p-4 m-2">
                             <legend>Responda las siguientes preguntas</legend>
@@ -35,10 +43,10 @@
                             <div class="d-flex justify-content-around">
                                 
                                 <div class="form-check form-check-inline">
-                                    <input class="" id="preferencia1" type="radio" name="preferencia" value="laptop"><label class="pl-2"> Laptop</label>
+                                    <input class="" id="preferencia1" type="radio" name="preferencia" value="Laptop"><label class="pl-2">Laptop</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="" id="preferencia2" type="radio" name="preferencia" value="Escritorio"><label class="pl-2"> Escritorio</label>
+                                    <input class="" id="preferencia2" type="radio" name="preferencia" value="Escritorio"><label class="pl-2">Escritorio</label>
                                 </div>
                             </div>
                             
@@ -46,10 +54,10 @@
                                 <label class="pt-2">¿Cual es tu area de trabajo?</label>
                                 <select id="area" class="form-control container" required>
                                     <option selected>Choose...</option>
-                                    <option value="escuela">Escuela</option>
-                                    <option value="oficina">Oficina</option>
-                                    <option value="diseño">Diseño</option>
-                                    <option value="gaming">Gaming</option>
+                                    <option value="Escuela">Escuela</option>
+                                    <option value="Oficina">Oficina</option>
+                                    <option value="Diseño">Diseño</option>
+                                    <option value="Gaming">Gaming</option>
                                 </select>                              
                                 
                                 <label class="pt-2">¿Cual es tu presupuesto estimado?</label>
@@ -58,8 +66,8 @@
                                 <label class="pt-4">¿Que Procesador Prefieres?</label>
                                 <select id="procesador" class="form-control container">
                                     <option selected>Choose...</option>
-                                    <option value="intel">Intel</option>
-                                    <option value="amd">AMD</option>
+                                    <option value="Intel">Intel</option>
+                                    <option value="AMD">AMD</option>
                                 </select>  
 
                             </div>
@@ -77,6 +85,11 @@
                     </form>
                     
                 </div>
+
+                <div id="result">
+                    
+                </div>
+
             </div>
         </div>
     </main>
